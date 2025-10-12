@@ -1,0 +1,8 @@
+POST http://localhost:8000/map/post/json
+Connection: keep-alive
+Content-Type: application/json
+
+{
+  "gio": "angie",
+  "angie": "punchy"
+}
