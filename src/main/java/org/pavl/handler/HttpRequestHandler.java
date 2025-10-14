@@ -21,9 +21,6 @@ public interface HttpRequestHandler {
     String METHOD_NOT_ALLOWED = "Method Not Allowed";
     int METHOD_NOT_ALLOWED_ERROR_CODE = 405;
 
-    String INTERNAL_SERVER_ERROR = "Internal Server Error";
-    int SERVER_ERROR_CODE = 500;
-
     HttpResponse handle(HttpRequestLine requestLine, HttpHeaders headers, byte[] body);
 
     static HttpResponse createSuccessfulResponse(byte[] body, int httpVersion, String contentType) {
@@ -44,12 +41,6 @@ public interface HttpRequestHandler {
     static HttpResponse createMethodNotAllowedErrorResponse(int httpVersion) {
         byte[] bodyAsBytes = METHOD_NOT_ALLOWED.getBytes(StandardCharsets.UTF_8);
         HttpResponseLine responseLine = new HttpResponseLine(httpVersion, METHOD_NOT_ALLOWED_ERROR_CODE, METHOD_NOT_ALLOWED);
-        return getHttpResponse(bodyAsBytes, responseLine, DEFAULT_CONTENT_TYPE);
-    }
-
-    static HttpResponse createServerErrorResponse(int httpVersion) {
-        byte[] bodyAsBytes = INTERNAL_SERVER_ERROR.getBytes(StandardCharsets.UTF_8);
-        HttpResponseLine responseLine = new HttpResponseLine(httpVersion, SERVER_ERROR_CODE, INTERNAL_SERVER_ERROR);
         return getHttpResponse(bodyAsBytes, responseLine, DEFAULT_CONTENT_TYPE);
     }
 

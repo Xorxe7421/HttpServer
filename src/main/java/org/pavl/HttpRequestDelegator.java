@@ -5,7 +5,6 @@ import org.pavl.handler.file.FileGetHandler;
 import org.pavl.handler.file.FilePostHandler;
 import org.pavl.handler.map.*;
 
-import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 

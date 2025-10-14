@@ -14,7 +14,7 @@ public class BodySerializerModifier extends BeanSerializerModifier {
                                                      BeanDescription beanDesc,
                                                      List<BeanPropertyWriter> beanProperties) {
         for (BeanPropertyWriter writer : beanProperties) {
-            if ("body".equals(writer.getName())) {
+            if (writer.getName().equals("Body")) {
                 writer.assignSerializer(new BodySerializer());
             }
         }

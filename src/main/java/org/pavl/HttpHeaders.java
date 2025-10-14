@@ -24,17 +24,6 @@ public class HttpHeaders {
         return headerMap.get(key);
     }
 
-    public boolean containsKey(HttpHeaderKey key) {
-        return headerMap.containsKey(key);
-    }
-
-    public void addEntry(HttpHeaderKey key, String value) {
-        if (key == null || value == null) {
-            throw new IllegalArgumentException("Invalid input, null not allowed");
-        }
-        headerMap.put(key, value);
-    }
-
     @Override
     public String toString() {
         String result =  headerMap
