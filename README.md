@@ -72,12 +72,12 @@ mkdir files
 POST http://localhost:8000/map/post/form
 Content-Type: application/x-www-form-urlencoded
 
-gio=angie&ana=dato&merab=shorena
+foo=bar&foo1=bar1&foo2=bar2
 ```
 
 **Example — get:**
 ```http
-GET http://localhost:8000/map/get/form?key=gio
+GET http://localhost:8000/map/get/form?key=foo
 ```
 
 ---
@@ -96,8 +96,8 @@ POST http://localhost:8000/map/post/json
 Content-Type: application/json
 
 {
-  "gio": "angie",
-  "angie": "punchy"
+  "foo": "bar",
+  "foo1": "bar1"
 }
 ```
 
@@ -106,7 +106,7 @@ Content-Type: application/json
 GET http://localhost:8000/map/get/json
 Content-Type: application/json
 
-{ "key": "gio" }
+{ "key": "foo" }
 ```
 
 ---

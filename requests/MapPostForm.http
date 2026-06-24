@@ -2,4 +2,4 @@ POST http://localhost:8000/map/post/form
 Connection: keep-alive
 Content-Type: application/x-www-form-urlencoded
 
-gio=angie&ana=dato&merab=shorena
+foo=bar&foo1=bar1&foo2=bar2

@@ -3,6 +3,6 @@ Connection: keep-alive
 Content-Type: application/json
 
 {
-  "gio": "angie",
-  "angie": "punchy"
+  "foo": "bar",
+  "foo1": "bar1"
 }

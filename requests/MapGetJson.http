@@ -1,2 +1,2 @@
-GET http://localhost:8000/map/get/form?key=gio
+GET http://localhost:8000/map/get/form?key=foo
 Connection: keep-alive
